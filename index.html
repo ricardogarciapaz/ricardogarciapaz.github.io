@@ -334,6 +334,17 @@
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
         /* ─── RESPONSIVE ─── */
+        @media (max-width: 1280px) {
+            section { padding: 90px 48px; }
+            .hero-content { padding: 120px 48px 70px; }
+            nav { padding: 18px 32px; }
+            .roadmap-steps { grid-template-columns: 1fr 1fr; }
+            .about-grid { gap: 48px; }
+            .scope-text { padding: 40px; }
+            .scope-stats { padding: 40px; }
+            .gee-grid { gap: 48px; }
+        }
+
         @media (max-width: 960px) {
             nav { padding: 16px 24px; }
             .nav-links { display: none; }
@@ -352,6 +363,53 @@
             footer { flex-direction: column; gap: 10px; padding: 24px; text-align: center; }
         }
     </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ricardogarciapaz.github.io/#person",
+      "name": "Ricardo García-Paz Soldán",
+      "givenName": "Ricardo",
+      "familyName": "García-Paz Soldán",
+      "jobTitle": "Biólogo · Investigador Independiente",
+      "description": "Biólogo e investigador independiente especializado en ecología urbana, catastro de cobertura arbórea y análisis geoespacial a escala urbana. Autor del Plano Director de Ecosistemas Urbanos Saludables (PDEUS).",
+      "email": ["rdgarciapaz@gmail.com", "naturexreportes@gmail.com"],
+      "telephone": "+59164431922",
+      "url": "https://ricardogarciapaz.github.io",
+      "sameAs": ["https://www.linkedin.com/in/ricardogarciapazsoldan/"],
+      "knowsAbout": ["Ecología urbana","Cobertura arbórea urbana","Servicios ecosistémicos","Biodiversidad urbana","Deep learning","Redes neuronales convolucionales U-Net","Google Earth Engine","Análisis geoespacial","Planificación urbana","Bolivia"],
+      "affiliation": [
+        {"@type": "Organization","name": "Museo de Historia Natural Noel Kempff Mercado"},
+        {"@type": "Organization","name": "Universidad Autónoma Gabriel René Moreno","department": "Facultad de Ciencias Agrícolas"}
+      ],
+      "address": {"@type": "PostalAddress","addressLocality": "Santa Cruz de la Sierra","addressCountry": "BO"}
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://ricardogarciapaz.github.io/#pub2024",
+      "name": "Catastro de la cobertura arbórea para la planificación urbana",
+      "author": {"@id": "https://ricardogarciapaz.github.io/#person"},
+      "datePublished": "2024",
+      "publisher": {"@type": "Organization","name": "Revista Forestal Tropical"},
+      "volumeNumber": "3",
+      "pageStart": "3",
+      "pageEnd": "25",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://ricardogarciapaz.github.io/#pdeus",
+      "name": "Plano Director de Ecosistemas Urbanos Saludables",
+      "alternateName": "PDEUS",
+      "description": "Sistema de registro y monitoreo de la cobertura arbórea para la gestión de la biodiversidad y los servicios ecosistémicos en el radio urbano de los municipios.",
+      "author": {"@id": "https://ricardogarciapaz.github.io/#person"},
+      "keywords": "ecosistemas urbanos, cobertura arbórea, biodiversidad, servicios ecosistémicos, Bolivia, Santa Cruz de la Sierra"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
