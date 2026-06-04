@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo García-Paz Soldán — Ecología Urbana · Bolivia</title>
-    <meta name="description" content="Biólogo e investigador independiente. Autor del Plano Director de Ecosistemas Urbanos Saludables (PDEUS) · Santa Cruz de la Sierra, Bolivia.">
-    <meta name="keywords" content="ecosistemas urbanos, cobertura arbórea, biodiversidad urbana, servicios ecosistémicos, Google Earth Engine, deep learning, U-Net, Bolivia, Santa Cruz de la Sierra, catastro">
+    <meta name="description" content="Biólogo e investigador independiente. Autor del PDEUS y los Corredores Ecológicos Ribereños (CER) · Santa Cruz de la Sierra, Bolivia.">
+    <meta name="keywords" content="ecosistemas urbanos, cobertura arbórea, corredores ecológicos ribereños, biodiversidad urbana, servicios ecosistémicos, Google Earth Engine, deep learning, U-Net, Bolivia, Santa Cruz de la Sierra, catastro, NbS, restauración ribereña">
     <meta property="og:title" content="Ricardo García-Paz Soldán — Ecología Urbana · Bolivia">
-    <meta property="og:description" content="Investigador independiente · Plano Director de Ecosistemas Urbanos Saludables (PDEUS)">
+    <meta property="og:description" content="Investigador independiente · PDEUS · Corredores Ecológicos Ribereños (CER)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -93,7 +93,7 @@
         }
         .hero-content {
             position: relative; z-index: 2;
-            padding: 130px 80px 80px; max-width: 880px;
+            padding: 130px 80px 80px; max-width: 900px;
         }
         .hero-eyebrow {
             font-family: 'DM Mono', monospace; font-size: 11px;
@@ -117,7 +117,7 @@
         .hero-project-card {
             background: rgba(45,90,39,0.13);
             border: 1px solid rgba(141,184,138,0.22); border-left: 3px solid var(--sage);
-            padding: 26px 30px; margin-bottom: 48px; max-width: 660px;
+            padding: 26px 30px; margin-bottom: 48px; max-width: 680px;
             animation: fadeUp 0.7s 0.5s both;
         }
         .hero-project-label {
@@ -126,10 +126,13 @@
         }
         .hero-project-title {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 21px; font-weight: 600; color: #fff; line-height: 1.3;
+            font-size: 20px; font-weight: 600; color: #fff; line-height: 1.3;
         }
         .hero-project-sub {
-            font-size: 13.5px; color: rgba(196,217,194,0.6); margin-top: 8px; font-style: italic;
+            font-size: 13px; color: rgba(196,217,194,0.6); margin-top: 7px; font-style: italic;
+        }
+        .hero-project-divider {
+            height: 1px; background: rgba(141,184,138,0.18); margin: 18px 0;
         }
         .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; animation: fadeUp 0.7s 0.62s both; }
         .badge { font-family: 'DM Mono', monospace; font-size: 11px; padding: 6px 14px; border-radius: 2px; letter-spacing: 0.05em; }
@@ -160,7 +163,7 @@
         }
         .section-lead {
             font-size: 18px; color: var(--text-mid); font-weight: 300;
-            font-style: italic; max-width: 700px; margin-bottom: 64px;
+            font-style: italic; max-width: 700px; margin-bottom: 56px;
         }
 
         /* ─── ABOUT ─── */
@@ -192,9 +195,34 @@
             margin-top: 20px; padding: 14px 18px; background: var(--cream); border: 1px solid var(--border);
             display: flex; align-items: center; gap: 9px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-lighter);
         }
-        .dot-anim { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; animation: pulse 2.2s infinite; }
+        .dot-anim { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; animation: pulse 2.2s infinite; flex-shrink: 0; }
 
-        /* ─── PROYECTO ─── */
+        /* ─── TERMINOLOGY NOTE ─── */
+        .terminology-note {
+            background: #fffbf2;
+            border: 1px solid rgba(184,136,46,0.3);
+            border-left: 3px solid var(--gold);
+            padding: 24px 28px;
+            margin-bottom: 48px;
+            max-width: 820px;
+        }
+        .terminology-note-tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .terminology-note p {
+            font-size: 13.5px;
+            color: var(--text-mid);
+            line-height: 1.82;
+            margin-bottom: 10px;
+        }
+        .terminology-note p:last-child { margin-bottom: 0; }
+
+        /* ─── PROYECTO PDEUS ─── */
         .project { background: var(--off-white); }
 
         .pdeus-intro {
@@ -256,10 +284,94 @@
         .badge-active { background: rgba(45,90,39,0.1); color: var(--forest-accent); border: 1px solid rgba(45,90,39,0.25); }
         .badge-next { background: transparent; color: var(--text-lighter); border: 1px solid var(--border); }
 
+        /* ─── CER SECTION ─── */
+        .cer-section { background: var(--warm-white); }
+        .cer-section .section-tag { color: #1a6e8e; }
+        .cer-section .section-tag::after { background: #d4eaf2; }
+
+        .cer-definition-card {
+            background: var(--cream);
+            border: 1px solid var(--border-dark);
+            border-left: 4px solid #1a6e8e;
+            padding: 38px 42px;
+            margin-bottom: 52px;
+        }
+        .cer-def-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: #1a6e8e;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .cer-def-label::after { content: ''; flex: 1; height: 1px; background: #c8dde5; max-width: 56px; }
+        .cer-definition-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 19px;
+            font-weight: 400;
+            color: var(--text-dark);
+            line-height: 1.72;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .cer-distinction-note {
+            font-size: 13.5px;
+            color: var(--text-light);
+            line-height: 1.82;
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+        }
+
+        .cer-basins-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 52px;
+        }
+        .cer-basin-item {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            padding: 20px 14px;
+            border-top: 3px solid transparent;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .cer-basin-item:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .cer-basin-item.basin-pilot-top { border-top-color: #1a6e8e; }
+        .cer-basin-item.basin-high-top { border-top-color: var(--forest-accent); }
+        .cer-basin-item.basin-mid-top { border-top-color: var(--border-dark); }
+        .cer-basin-num-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            color: var(--text-lighter);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        .cer-basin-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .cer-basin-badge {
+            display: inline-block;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.05em;
+        }
+        .basin-pilot { background: rgba(26,110,142,0.09); color: #1a6e8e; border: 1px solid rgba(26,110,142,0.22); }
+        .basin-high { background: rgba(45,90,39,0.07); color: var(--forest-accent); border: 1px solid rgba(45,90,39,0.18); }
+        .basin-mid { background: transparent; color: var(--text-lighter); border: 1px solid var(--border); }
+
         /* ─── METHODOLOGY ─── */
-        .methodology { background: var(--warm-white); }
+        .methodology { background: var(--off-white); }
         .pipeline { display: flex; margin-bottom: 60px; overflow-x: auto; gap: 2px; }
-        .step { flex: 1; min-width: 165px; background: var(--off-white); padding: 28px 22px; position: relative; transition: background 0.2s; }
+        .step { flex: 1; min-width: 165px; background: var(--warm-white); padding: 28px 22px; position: relative; transition: background 0.2s; }
         .step:hover { background: var(--cream); }
         .step.hl { background: rgba(45,90,39,0.07); border-top: 2px solid var(--forest-accent); }
         .step.hl:hover { background: rgba(45,90,39,0.12); }
@@ -343,6 +455,7 @@
             .scope-text { padding: 40px; }
             .scope-stats { padding: 40px; }
             .gee-grid { gap: 48px; }
+            .cer-basins-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         @media (max-width: 960px) {
@@ -361,6 +474,9 @@
             .videos-grid { grid-template-columns: 1fr; }
             .contact-cards { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 10px; padding: 24px; text-align: center; }
+            .cer-basins-grid { grid-template-columns: 1fr 1fr; }
+            .cer-definition-card { padding: 24px 22px; }
+            .terminology-note { max-width: 100%; }
         }
     </style>
 <script type="application/ld+json">
@@ -374,12 +490,12 @@
       "givenName": "Ricardo",
       "familyName": "García-Paz Soldán",
       "jobTitle": "Biólogo · Investigador Independiente",
-      "description": "Biólogo e investigador independiente especializado en ecología urbana, catastro de cobertura arbórea y análisis geoespacial a escala urbana. Autor del Plano Director de Ecosistemas Urbanos Saludables (PDEUS).",
+      "description": Autor del PDEUS y los Corredores Ecológicos Ribereños (CER).",
       "email": ["rdgarciapaz@gmail.com", "naturexreportes@gmail.com"],
       "telephone": "+59164431922",
       "url": "https://ricardogarciapaz.github.io",
       "sameAs": ["https://www.linkedin.com/in/ricardogarciapazsoldan/"],
-      "knowsAbout": ["Ecología urbana","Cobertura arbórea urbana","Servicios ecosistémicos","Biodiversidad urbana","Deep learning","Redes neuronales convolucionales U-Net","Google Earth Engine","Análisis geoespacial","Planificación urbana","Bolivia"],
+      "knowsAbout": ["Ecología","Cobertura arbórea CA","Servicios ecosistémicos","Biodiversidad urbana","Deep learning","Redes neuronales convolucionales U-Net","Python","Colaboratory","Análisis geoespacial","Planificación urbana","Restauración ecológica asistida","Corredores ecológicos ribereños","Soluciones Basadas en la Naturaleza NbS","Bolivia","Santa Cruz de la Sierra"],
       "affiliation": [
         {"@type": "Organization","name": "Museo de Historia Natural Noel Kempff Mercado"},
         {"@type": "Organization","name": "Universidad Autónoma Gabriel René Moreno","department": "Facultad de Ciencias Agrícolas"}
@@ -403,9 +519,18 @@
       "@id": "https://ricardogarciapaz.github.io/#pdeus",
       "name": "Plano Director de Ecosistemas Urbanos Saludables",
       "alternateName": "PDEUS",
-      "description": "Sistema de registro y monitoreo de la cobertura arbórea para la gestión de la biodiversidad y los servicios ecosistémicos en el radio urbano de los municipios.",
+      "description": "Instrumento técnico de gestión territorial orientado a la conservación de la biodiversidad y el mantenimiento de los servicios ecosistémicos a escala urbana. Su primer componente es el Catastro de la Cobertura Arbórea, sistema de registro y monitoreo de la cobertura arbórea en el radio urbano de los municipios.",
       "author": {"@id": "https://ricardogarciapaz.github.io/#person"},
-      "keywords": "ecosistemas urbanos, cobertura arbórea, biodiversidad, servicios ecosistémicos, Bolivia, Santa Cruz de la Sierra"
+      "keywords": "ecosistemas urbanos, cobertura arbórea, biodiversidad, servicios ecosistémicos, catastro, Bolivia, Santa Cruz de la Sierra"
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://ricardogarciapaz.github.io/#cer",
+      "name": "Corredores Ecológicos Ribereños",
+      "alternateName": "CER",
+      "description": "Sistema de restauración y conservación de la cobertura arbórea nativa en las márgenes de los principales cauces del Departamento de Santa Cruz, como Solución Basada en la Naturaleza para la reducción del riesgo hídrico y la provisión sostenida de servicios ecosistémicos ribereños.",
+      "author": {"@id": "https://ricardogarciapaz.github.io/#person"},
+      "keywords": "corredores ecológicos ribereños, restauración ecológica, cobertura arbórea ribereña, servicios ecosistémicos, NbS, riesgo hídrico, Bolivia, Santa Cruz"
     }
   ]
 }
@@ -419,6 +544,7 @@
     <ul class="nav-links">
         <li><a href="#investigador">Investigador</a></li>
         <li><a href="#proyecto">PDEUS</a></li>
+        <li><a href="#cer">CER</a></li>
         <li><a href="#metodologia">Metodología</a></li>
         <li><a href="#gee">Google Earth Engine</a></li>
         <li><a href="#videos">Videos</a></li>
@@ -432,18 +558,23 @@
     <div class="hero-glow"></div>
     <div class="hero-glow-2"></div>
     <div class="hero-content">
-        <div class="hero-eyebrow">Investigador Independiente · Ecología Urbana · Bolivia</div>
+        <div class="hero-eyebrow">Investigador Independiente · Ecología · Bolivia</div>
         <h1 class="hero-name">Ricardo<br><em>García-Paz Soldán</em></h1>
         <p class="hero-subtitle">
             Biólogo · Deep Learning · Análisis Geoespacial<br>
             Santa Cruz de la Sierra, Bolivia
         </p>
         <div class="hero-project-card">
-            <div class="hero-project-label">Proyecto en desarrollo — en preparación para publicación científica</div>
+            <div class="hero-project-label">Proyectos en desarrollo — en preparación para publicación</div>
             <div class="hero-project-title">Plano Director de Ecosistemas Urbanos Saludables (PDEUS)</div>
             <div class="hero-project-sub">
                 Sistema de registro y monitoreo de la cobertura arbórea para la gestión de la biodiversidad
                 y los servicios ecosistémicos en el radio urbano de los municipios
+            </div>
+            <div class="hero-project-divider"></div>
+            <div class="hero-project-title" style="font-size: 17px;">Corredores Ecológicos Ribereños (CER)</div>
+            <div class="hero-project-sub">
+                Sistema de restauración y gestión de la cobertura arbórea ribereña en los principales cauces del Departamento de Santa Cruz
             </div>
         </div>
         <div class="hero-badges">
@@ -452,6 +583,7 @@
             <span class="badge badge-outline">Google Earth Engine</span>
             <span class="badge badge-outline">Análisis Geoespacial</span>
             <span class="badge badge-outline">Servicios Ecosistémicos</span>
+            <span class="badge badge-outline">NbS · UICN 2020</span>
             <span class="badge badge-outline">Bolivia</span>
         </div>
     </div>
@@ -467,10 +599,10 @@
         <div class="section-tag">01 · Sobre el investigador</div>
         <div class="about-grid">
             <div class="about-text">
-                <h2 class="section-title">Biólogo especializado en ecología urbana y análisis geoespacial</h2>
-                <p>Soy biólogo con especialización en el análisis espacial de ecosistemas urbanos. Mi trabajo se concentra en la cobertura arbórea, la biodiversidad y los servicios ecosistémicos a escala urbana, integrando la biología de la conservación con herramientas de deep learning y análisis geoespacial.</p>
-                <p>He desarrollado y publicado metodologías para el catastro de la cobertura arbórea como instrumento de gestión municipal — trabajo que constituyó el <strong>primer catastro de cobertura arbórea para un distrito urbano de Bolivia</strong>. Actualmente estoy desarrollando un marco de trabajo de mayor alcance: el <em>Plano Director de Ecosistemas Urbanos Saludables (PDEUS)</em>, en redacción para publicación en revista científica.</p>
-                <p>Cuento con vinculación al <strong>Museo de Historia Natural Noel Kempff Mercado</strong> y a la <strong>Facultad de Ciencias Agrícolas de la Universidad Autónoma Gabriel René Moreno</strong>, Santa Cruz, Bolivia.</p>
+                <h2 class="section-title">Biólogo · Ecología · análisis geoespacial</h2>
+                <p>Enfocado en el análisis espacial de la cobertura arbórea, la biodiversidad y los servicios ecosistémicos en ecosistemas, integrando la biología de la conservación con herramientas de deep learning y análisis geoespacial.</p>
+                <p>Se ha desarrollado el marco de trabajo (Framework) para el catastro de la cobertura arbórea como instrumento de gestión municipal — <strong>el primero en su tipo para un distrito urbano de Bolivia</strong>. Actualmente el marco de trabajo evolucionó como: <em>Plano Director de Ecosistemas Urbanos Saludables (PDEUS)</em> y los <em>Corredores Ecológicos Ribereños (CER)</em>, ambos en redacción para publicación.</p>
+                <p>Vinculación al <strong>Museo de Historia Natural Noel Kempff Mercado</strong> y a la <strong>Facultad de Ciencias Agrícolas de la Universidad Autónoma Gabriel René Moreno</strong>, Santa Cruz, Bolivia.</p>
                 <div class="chips">
                     <span class="chip">Ecología urbana</span>
                     <span class="chip">Catastro de cobertura arbórea</span>
@@ -478,6 +610,7 @@
                     <span class="chip">Deep learning · U-Net</span>
                     <span class="chip">Google Earth Engine</span>
                     <span class="chip">Servicios ecosistémicos</span>
+                    <span class="chip">Restauración ribereña · NbS</span>
                     <span class="chip">Biodiversidad urbana</span>
                     <span class="chip">Planificación urbana</span>
                     <span class="chip">ArcGIS · ENVI</span>
@@ -511,16 +644,34 @@
     </div>
 </section>
 
-<!-- PROYECTO -->
+<!-- PROYECTO PDEUS -->
 <section class="project" id="proyecto">
     <div class="section-inner">
         <div class="section-tag">02 · El proyecto</div>
         <h2 class="section-title">Plano Director de Ecosistemas<br>Urbanos Saludables (PDEUS)</h2>
-        <p class="section-lead">Sistema de registro y monitoreo de la cobertura arbórea para la gestión de la biodiversidad y los servicios ecosistémicos en el radio urbano de los municipios.</p>
+        <p class="section-lead">Instrumento técnico de gestión territorial orientado a la conservación de la biodiversidad y el mantenimiento de los servicios ecosistémicos a escala urbana.</p>
 
+        <!-- Terminology note -->
+        <div class="terminology-note">
+            <div class="terminology-note-tag">Nota sobre metodología</div>
+            <p>La metodología del PDEUS establece una distinción explícita: <strong>cobertura arbórea (CA)</strong> designa específicamente el biotipo árbol-arbusto-palmera, y se analiza en relación directa con las asignaciones de uso de suelo del diseño urbano (<strong>Epr · Epu · Rv</strong>).  La CA no es equivalente a vegetación: es una medida específica de la proyección horizontal de la copa sobre el suelo. Esta coherencia terminológica es el fundamento del sistema de registro.</p>
+            <p>Los requerimientos de espacio físico y las funciones ecosistémicas que brinda el biotipo arbóreo difieren al de otro biotipo de vegetación. Además, como se vio en los resultados, la propiedad en la que se encuentran es una variable determinante en las variaciones de CA. En ese sentido, la metodología se concentró en diferenciar claramente el término para el biotipo de estudio (árbol-arbusto-palmera) y de las asignaciones de uso de suelo que componen la estructura urbana (Epr-Epu-Rv). Esto resulta importante a la hora de vincular las capas para su análisis. Las abreviaturas y acrónimos que se introdujeron buscan mantener esa coherencia.</p>
+        </div>
+	
+	<!-- NEW: TERMINOLOGÍA · Marco conceptual del PDEUS -->
+        <div class="terminology-note">
+            <div class="terminology-note-tag">Terminología · Marco conceptual del PDEUS</div>
+            <p><strong>PDEUS</strong> — Plano Director de Ecosistemas Urbanos Saludables. Instrumento técnico de gestión territorial orientado a la conservación de la biodiversidad y el mantenimiento de los servicios ecosistémicos a escala urbana.</p>
+            <p><strong>CA — Cobertura Arbórea</strong> — Superficie proyectada de las copas de los árboles sobre el suelo, medida en hectáreas (ha) metros cuadrados (m). Comprende el área de copa del biotipo arbóreo: árbol, arbusto y palmera.
+            <p><strong>Radio urbano</strong> — Área con límite jurídico definido y uso de suelo urbano. Es la escala de análisis del PDEUS. Cuando se habla de área periurbana, hay que entender que es otra escala, que requiere delimitación propia, identificación de uso de suelo y determinación de su función ecológica antes de ser incorporada al análisis.</p>
+            <p><strong>Epu — Espacios Públicos</strong> — Espacios de propiedad y uso público dentro del radio urbano: plazas, parques, vías, equipamientos.</p>
+            <p><strong>Epr — Espacios Privados</strong> — Predios de propiedad privada dentro del radio urbano: lotes residenciales, comerciales, industriales.</p>
+        </div>
+
+        <!-- PDEUS intro -->
         <div class="pdeus-intro">
-            <p>El punto de partida del PDEUS es una premisa elemental, pero sistemáticamente ignorada en la gestión municipal: antes de intervenir, un municipio debe saber con precisión qué tiene, cuánto tiene, cómo está distribuido y cuánto debería haber. Los programas de arborización que se ejecutan sin esta información son, con frecuencia, una respuesta a un problema que aún no se ha cuantificado.</p>
-            <p>El objetivo del catastro no es producir un mapa: es identificar la cobertura arbórea (CA) ya existente en el radio urbano, para que los municipios puedan enfocarse primero en su conservación, brindándole las condiciones necesarias para su desarrollo y mantenimiento. La CA de un árbol adulto no se recupera en el corto plazo. Conservar lo que ya existe es la intervención más eficiente.</p>
+            <p>El PDEUS tiene como estructura fundamental 2 componentes: 1.- Catastro de la Cobertura Arbórea (CA) y 2.- Análisis del diseño urbano para conocer su capacidad para albergar especies arbóreas. El primero es un inventario y diagnóstico de lo que se tiene (¿dónde hay?, ¿cuánto hay?); el segundo identifica el suelo disponible en espacio público para una futura arborización (cuarto componente del PDEUS).</p>
+            <p>La finalidad del catastro de la CA no es la arborización. El catastro de la CA se genera para conocer la proporción, situación y distribución de la cobertura arbórea actual. A partir de ese conocimiento, el foco inmediato es la conservación de la CA ya identificada.</p>
         </div>
 
         <div class="products-title">Componente 1 · Línea base — Catastro de la Cobertura Arbórea</div>
@@ -546,7 +697,7 @@
         <div class="scope-block">
             <div class="scope-text">
                 <h3>Área de estudio</h3>
-                <p>El radio urbano del municipio de Santa Cruz de la Sierra es el área de desarrollo del proyecto. Su extensión, densidad urbana y el volumen de información geoespacial involucrado hacen necesario el uso de plataformas de computación en la nube de alta capacidad como Google Earth Engine para ejecutar el análisis en plazos compatibles con una investigación científica.</p>
+                <p>El radio urbano del municipio de Santa Cruz de la Sierra es el área de desarrollo del proyecto. Su extensión y el volumen de información geoespacial involucrado hacen necesario el uso de la API de Google Earth Engine dentro del entorno Python · Google Colab, para ejecutar el análisis en plazos compatibles con una investigación científica.</p>
                 <div class="scope-text-badge">
                     <span class="dot-anim"></span>
                     En redacción · Preparación para publicación científica
@@ -567,7 +718,7 @@
                 </div>
                 <div class="stat">
                     <div class="stat-val">GEE</div>
-                    <div class="stat-lbl">Plataforma cloud</div>
+                    <div class="stat-lbl">API · vía Python</div>
                 </div>
             </div>
         </div>
@@ -577,24 +728,24 @@
             <div class="roadmap-steps">
                 <div class="roadmap-step active">
                     <div class="roadmap-step-num">COMPONENTE 1 · En desarrollo</div>
-                    <div class="roadmap-step-name">Catastro de la Cobertura Arbórea</div>
-                    <div class="roadmap-step-desc">Componente mínimo e imprescindible. Sistema de registro de la CA existente en el radio urbano con sus tres productos: Tabla Maestra, Representación y Análisis, y Servicios Ecosistémicos.</div>
+                    <div class="roadmap-step-name">Catastro de la Cobertura Arbórea CA</div>
+                    <div class="roadmap-step-desc">Componente mínimo e imprescindible. Inventario y diagnóstico de la CA existente: ¿dónde hay?, ¿cuánto hay?, ¿cómo está distribuida? Genera tres productos: Tabla Maestra, Representación Visual y Métricas, y Servicios Ecosistémicos.</div>
                     <span class="roadmap-step-badge badge-active">En desarrollo</span>
                 </div>
-                <div class="roadmap-step">
-                    <div class="roadmap-step-num">COMPONENTE 2 · Proxima etapa</div>
-                    <div class="roadmap-step-name">Suelo Permeable Disponible</div>
-                    <div class="roadmap-step-desc">Identificación del suelo permeable disponible para arborizar en espacios públicos. Requiere los datos del Componente 1 como base.</div>
+                <div class="roadmap-step active">
+                    <div class="roadmap-step-num">COMPONENTE 2 · Próxima etapa</div>
+                    <div class="roadmap-step-name">Análisis del Diseño Urbano</div>
+                    <div class="roadmap-step-desc">Identificación del suelo permeable disponible en espacio público con capacidad para albergar especies arbóreas. Insumo directo para el componente 4.</div>
                     <span class="roadmap-step-badge badge-next">Próxima etapa</span>
                 </div>
                 <div class="roadmap-step">
-                    <div class="roadmap-step-num">COMPONENTE 3 · Proxima etapa</div>
+                    <div class="roadmap-step-num">COMPONENTE 3 · Próxima etapa</div>
                     <div class="roadmap-step-name">Rediseño Urbano</div>
-                    <div class="roadmap-step-desc">Identificación de espacios públicos potenciales actualmente impermeabilizados que pueden habilitarse para arborización.</div>
+                    <div class="roadmap-step-desc">Identificación de espacios públicos actualmente impermeabilizados que pueden habilitarse para arborización.</div>
                     <span class="roadmap-step-badge badge-next">Próxima etapa</span>
                 </div>
                 <div class="roadmap-step">
-                    <div class="roadmap-step-num">COMPONENTE 4 · Proxima etapa</div>
+                    <div class="roadmap-step-num">COMPONENTE 4 · Próxima etapa</div>
                     <div class="roadmap-step-name">Plan Maestro de Arborización</div>
                     <div class="roadmap-step-desc">Con los datos de los tres componentes anteriores, un Plan Maestro de Arborización tiene la información necesaria para ser verdaderamente efectivo.</div>
                     <span class="roadmap-step-badge badge-next">Próxima etapa</span>
@@ -605,12 +756,118 @@
     </div>
 </section>
 
+<!-- CER -->
+<section class="cer-section" id="cer">
+    <div class="section-inner">
+        <div class="section-tag">03 · Corredores Ecológicos Ribereños</div>
+        <h2 class="section-title">Corredores Ecológicos<br>Ribereños (CER)</h2>
+        <p class="section-lead">Sistema de restauración y conservación de la cobertura arbórea nativa en las márgenes de los principales cauces del Departamento de Santa Cruz, como Solución Basada en la Naturaleza para la reducción del riesgo hídrico y la provisión sostenida de servicios ecosistémicos ribereños.</p>
+
+        <!-- Definition card - centerpiece -->
+        <div class="cer-definition-card">
+            <div class="cer-def-label">Definición conceptual</div>
+            <p class="cer-definition-text">
+                Franja continua de vegetación nativa en las márgenes de un curso de agua — río, arroyo o quebrada — que cumple simultáneamente funciones de hábitat para la biota acuática y terrestre, conectividad paisajística entre parches de vegetación, protección física de las riberas frente a la erosión y los procesos de remoción en masa, regulación de los flujos de sedimentos y nutrientes hacia el cuerpo de agua, y amortiguamiento de los eventos de inundación.
+            </p>
+            <div class="cer-distinction-note">
+                A diferencia de una franja de vegetación protectora convencional, el CER está <strong>diseñado y gestionado con criterios ecológicos funcionales</strong>: incorpora zonificación por intensidad de degradación, especies indicadoras de la calidad ribereña y protocolos de seguimiento a largo plazo. No es forestación decorativa: es infraestructura verde que mejora con el tiempo, a medida que la cobertura vegetal madura y los servicios ecosistémicos se consolidan. El marco de Soluciones Basadas en la Naturaleza de la UICN (2020) clasifica los CER como NbS de tipo restauración de ecosistemas ribereños, con co-beneficios en reducción del riesgo de desastres, adaptación climática y conectividad biológica.
+            </div>
+        </div>
+
+        <!-- Problem + Stats -->
+        <div class="scope-block" style="margin-bottom: 52px;">
+            <div class="scope-text">
+                <h3>El problema que aborda</h3>
+                <p>La expansión agrícola y el crecimiento urbano no planificado han avanzado hasta las márgenes de los principales cauces del Departamento de Santa Cruz, destruyendo sistemáticamente la vegetación ribereña que durante milenios funcionó como infraestructura de estabilización, regulación hídrica y conectividad ecológica.</p>
+                <p style="margin-top: 14px;">El ciclo resultante es de retroalimentación negativa: menos vegetación ribereña → mayor velocidad de flujo y erosión → inundaciones más intensas → intervenciones de canalización que destruyen el remanente de cobertura → mayor vulnerabilidad al siguiente evento. El CER rompe este ciclo con infraestructura verde permanente.</p>
+                <div class="scope-text-badge" style="margin-top: 24px;">
+                    <span class="dot-anim"></span>
+                    Propuesta a la Gobernación de Santa Cruz · Gestión 2026–2031
+                </div>
+            </div>
+            <div class="scope-stats">
+                <div class="stat">
+                    <div class="stat-val">5</div>
+                    <div class="stat-lbl">cuencas priorizadas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-val">NbS</div>
+                    <div class="stat-lbl">Marco UICN 2020</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-val">GEE</div>
+                    <div class="stat-lbl">Diagnóstico territorial</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-val">HEC-RAS</div>
+                    <div class="stat-lbl">Modelado hidráulico</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Priority basins -->
+        <div class="products-title">Cuencas prioritarias · Departamento de Santa Cruz</div>
+        <div class="cer-basins-grid">
+            <div class="cer-basin-item basin-pilot-top">
+                <div class="cer-basin-num-label">CUENCA 01</div>
+                <div class="cer-basin-name">Piraí</div>
+                <span class="cer-basin-badge basin-pilot">Área piloto</span>
+            </div>
+            <div class="cer-basin-item basin-high-top">
+                <div class="cer-basin-num-label">CUENCA 02</div>
+                <div class="cer-basin-name">Grande (Guapay)</div>
+                <span class="cer-basin-badge basin-high">Alta prioridad</span>
+            </div>
+            <div class="cer-basin-item basin-high-top">
+                <div class="cer-basin-num-label">CUENCA 03</div>
+                <div class="cer-basin-name">Ichilo</div>
+                <span class="cer-basin-badge basin-high">Alta prioridad</span>
+            </div>
+            <div class="cer-basin-item basin-mid-top">
+                <div class="cer-basin-num-label">CUENCA 04</div>
+                <div class="cer-basin-name">Yapacaní</div>
+                <span class="cer-basin-badge basin-mid">Media-alta</span>
+            </div>
+            <div class="cer-basin-item basin-mid-top">
+                <div class="cer-basin-num-label">CUENCA 05</div>
+                <div class="cer-basin-name">Parapetí</div>
+                <span class="cer-basin-badge basin-mid">Media</span>
+            </div>
+        </div>
+
+        <!-- NbS + Methodology -->
+        <div class="method-note">
+            <div class="note-col">
+                <div class="note-tag">Solución Basada en la Naturaleza (NbS)</div>
+                <p>La restauración ribereña activa en ecosistemas neotropicales similares al Chiquitano y al Chaco húmedo alcanza indicadores funcionales equivalentes al bosque de referencia en 15 a 25 años, con mejoras significativas en biodiversidad e hidrología a partir del quinto año. El CER genera servicios ecosistémicos cuantificables: regulación de crecidas, retención de sedimentos, captura de carbono, purificación del agua y conectividad paisajística. A diferencia de la ingeniería convencional, mejora con el tiempo y es elegible para financiamiento climático internacional (GCF, GEF, REDD+).</p>
+                <div class="chips" style="margin-top: 18px;">
+                    <span class="chip">Hábitat ribereño</span>
+                    <span class="chip">Regulación hídrica</span>
+                    <span class="chip">Captura de carbono</span>
+                    <span class="chip">Conectividad paisajística</span>
+                    <span class="chip">Reducción riesgo hídrico</span>
+                </div>
+            </div>
+            <div class="note-divider"></div>
+            <div class="note-col">
+                <div class="note-tag">Marco metodológico</div>
+                <p>La metodología CER comparte el núcleo técnico del PDEUS —clasificación de cobertura arbórea mediante deep learning ejecutado en Python · Google Colab con acceso a datos geoespaciales vía API de GEE— y lo extiende al contexto ribereño con herramientas adicionales: clasificación con <strong>Random Forest</strong> sobre composites multitemporales Sentinel-2 para el diagnóstico departamental; arquitectura <strong>U-Net</strong> sobre imágenes de muy alta resolución para los tramos prioritarios; y modelado hidráulico (<strong>HEC-RAS · SWAT+</strong>) para cuantificar la reducción del riesgo hídrico bajo escenarios con y sin cobertura ribereña restaurada. El análisis de conectividad paisajística utiliza <strong>Circuitscape</strong>.</p>
+                <div class="status-dot-row" style="margin-top: 18px;">
+                    <span class="dot-anim"></span>
+                    Guía Metodológica en redacción · Bloque I completado
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- METODOLOGÍA -->
 <section class="methodology" id="metodologia">
     <div class="section-inner">
-        <div class="section-tag">03 · Marco metodológico</div>
+        <div class="section-tag">04 · Marco metodológico</div>
         <h2 class="section-title">Deep Learning y Análisis Geoespacial<br>a escala urbana</h2>
-        <p class="section-lead">El proceso integra imágenes satelitales de alta resolución con redes neuronales convolucionales para la segmentación semántica de la cobertura arbórea, y Google Earth Engine como plataforma de análisis geoespacial a escala del radio urbano completo.</p>
+        <p class="section-lead">El proceso integra imágenes satelitales de alta resolución con redes neuronales convolucionales para la segmentación semántica de la cobertura arbórea. El análisis se ejecuta en Python sobre Google Colab, utilizando la API de Google Earth Engine para el acceso a datos geoespaciales a gran escala. Este pipeline es el núcleo metodológico compartido por el PDEUS y el CER.</p>
 
         <div class="pipeline">
             <div class="step">
@@ -622,8 +879,8 @@
             <div class="step hl">
                 <span class="step-arrow">→</span>
                 <div class="step-n">PASO 02</div>
-                <div class="step-nm">Procesamiento en GEE</div>
-                <div class="step-ds">Preprocesamiento y corrección de imágenes a escala del radio urbano completo en la plataforma cloud de Google Earth Engine.</div>
+                <div class="step-nm">Python · Google Colab</div>
+                <div class="step-ds">Preprocesamiento y análisis ejecutado en Python sobre Google Colab. Acceso a datos satelitales y geoespaciales mediante la API de Google Earth Engine.</div>
             </div>
             <div class="step hl">
                 <span class="step-arrow">→</span>
@@ -651,8 +908,8 @@
             </div>
             <div class="note-divider"></div>
             <div class="note-col">
-                <div class="note-tag">Por qué se requiere GEE</div>
-                <p>La extensión del radio urbano analizado (~40,000 ha) y la resolución espacial de las imágenes generan volúmenes de datos que exceden la capacidad de procesamiento local. Google Earth Engine es la plataforma que permite ejecutar este análisis de forma eficiente y reproducible, en los plazos que exige una investigación científica orientada a publicación.</p>
+                <div class="note-tag">Por qué se requiere la API de GEE</div>
+                <p>El análisis se desarrolla en Python ejecutado sobre Google Colab, con almacenamiento en Google Drive. La API de Google Earth Engine se integra dentro de este entorno para el acceso y análisis de imágenes satelitales a gran escala. La extensión del radio urbano (~40,000 ha) y la resolución de las imágenes generan volúmenes de datos que requieren la capacidad de cómputo de GEE dentro del entorno Python.</p>
             </div>
         </div>
     </div>
@@ -661,43 +918,55 @@
 <!-- GEE -->
 <section class="gee-section" id="gee">
     <div class="section-inner">
-        <div class="section-tag">04 · Plataforma de análisis</div>
+        <div class="section-tag">05 · Entorno de trabajo</div>
         <div class="gee-grid">
             <div class="gee-identity">
-                <div class="gee-icon-box">🌍</div>
-                <div class="gee-name">Google Earth Engine</div>
-                <div class="gee-sub">Plataforma principal de análisis geoespacial</div>
-                <div class="gee-request-badge">⏳ Solicitud de capacidad de cómputo adicional</div>
+                <div style="display: flex; gap: 14px; justify-content: center;">
+                    <div class="gee-icon-box" style="width: 64px; height: 64px; font-size: 30px; background: linear-gradient(135deg, #3776AB 0%, #FFD43B 100%);">🐍</div>
+                    <div class="gee-icon-box" style="width: 64px; height: 64px; font-size: 30px; background: linear-gradient(135deg, #F9AB00 0%, #E37400 100%);">☁️</div>
+                    <div class="gee-icon-box" style="width: 64px; height: 64px; font-size: 30px; background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);">💾</div>
+                </div>
+                <div class="gee-name" style="font-size: 18px;">Python · Google Colab · Drive</div>
+                <div class="gee-sub">Entorno de trabajo principal</div>
+                <div style="height: 1px; background: #dde3f5; width: 80%;"></div>
+                <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    <div class="gee-icon-box" style="width: 44px; height: 44px; font-size: 22px; background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);">🌍</div>
+                    <div>
+                        <div class="gee-sub" style="text-align: left;">API de Google Earth Engine</div>
+                        <div style="font-family: 'DM Mono', monospace; font-size: 10px; color: #7a5000;">integrada dentro del entorno Python</div>
+                    </div>
+                </div>
+                <div class="gee-request-badge">⏳ Solicitud de capacidad de cómputo adicional en GEE</div>
             </div>
             <div>
-                <h2 class="section-title" style="margin-bottom: 32px;">Justificación de la solicitud<br>de capacidad adicional</h2>
+                <h2 class="section-title" style="margin-bottom: 32px;">Justificación de la solicitud<br>de capacidad adicional en GEE</h2>
                 <ul class="gee-reasons">
                     <li class="gee-reason">
                         <div class="reason-ico">📐</div>
                         <div class="reason-body">
                             <h4>Escala del radio urbano analizado</h4>
-                            <p>El radio urbano del municipio de Santa Cruz de la Sierra (~40,000 ha) genera volúmenes de datos de imagen de alta resolución que superan los límites de la cuota estándar de investigación en GEE, haciendo necesaria una capacidad de procesamiento ampliada.</p>
+                            <p>El radio urbano del municipio de Santa Cruz de la Sierra (~40,000 ha) genera volúmenes de datos de imagen de alta resolución que superan los límites de la cuota estándar de la API de GEE, haciendo necesaria una capacidad de cómputo ampliada dentro del entorno Python · Colab.</p>
                         </div>
                     </li>
                     <li class="gee-reason">
                         <div class="reason-ico">🧠</div>
                         <div class="reason-body">
                             <h4>Inferencia de U-Net a escala del radio urbano completo</h4>
-                            <p>La ejecución del modelo de segmentación semántica U-Net sobre imágenes de alta resolución a escala del radio urbano completo es computacionalmente intensiva. La capacidad estándar resulta insuficiente para completar el análisis en los plazos que requiere una publicación científica.</p>
+                            <p>La ejecución del modelo de segmentación semántica U-Net sobre imágenes de alta resolución a escala del radio urbano completo es computacionalmente intensiva. La cuota estándar de la API de GEE resulta insuficiente para completar el análisis en los plazos que requiere una publicación científica.</p>
                         </div>
                     </li>
                     <li class="gee-reason">
                         <div class="reason-ico">🌿</div>
                         <div class="reason-body">
                             <h4>Investigación científica sin fines de lucro</h4>
-                            <p>El PDEUS es un proyecto de investigación orientado a la conservación de la cobertura arbórea y la biodiversidad en el radio urbano de los municipios. Los resultados serán publicados en revista científica, disponibles a la comunidad académica y a los gobiernos municipales.</p>
+                            <p>El PDEUS y el CER son proyectos de investigación orientados a la conservación de la cobertura arbórea y la biodiversidad. Los resultados serán publicados en revista científica, disponibles a la comunidad académica y a los gobiernos municipales y departamentales.</p>
                         </div>
                     </li>
                     <li class="gee-reason">
                         <div class="reason-ico">📊</div>
                         <div class="reason-body">
                             <h4>Análisis multi-capa integrado</h4>
-                            <p>El marco metodológico requiere el procesamiento simultáneo de múltiples capas geoespaciales: imágenes satelitales, estructura urbana georreferenciada, datos climáticos y métricas de paisaje, integradas en GEE para la estimación de servicios ecosistémicos a escala del radio urbano completo.</p>
+                            <p>El marco metodológico requiere el acceso simultáneo a múltiples capas geoespaciales vía API de GEE: imágenes satelitales multitemporales, datos climáticos y métricas de paisaje, integradas dentro del entorno Python para la estimación de servicios ecosistémicos a escala del radio urbano completo.</p>
                         </div>
                     </li>
                 </ul>
@@ -709,7 +978,7 @@
 <!-- VIDEOS -->
 <section class="videos" id="videos">
     <div class="section-inner">
-        <div class="section-tag">05 · Divulgación</div>
+        <div class="section-tag">06 · Divulgación</div>
         <h2 class="section-title">Videos sobre el proyecto</h2>
         <p class="section-lead">Presentaciones del trabajo de investigación y del marco conceptual del PDEUS.</p>
         <div class="videos-grid">
@@ -736,7 +1005,7 @@
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
     <div class="section-inner">
-        <div class="section-tag">06 · Contacto</div>
+        <div class="section-tag">07 · Contacto</div>
         <h2 class="section-title">Contacto</h2>
         <p class="section-lead">Ricardo García-Paz Soldán · Investigador Independiente<br>Santa Cruz de la Sierra, Bolivia</p>
         <div class="contact-cards">
@@ -781,8 +1050,8 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2025 · Ricardo García-Paz Soldán · Investigador Independiente · Santa Cruz de la Sierra, Bolivia</p>
-    <p>Plano Director de Ecosistemas Urbanos Saludables (PDEUS) · En preparación para publicación científica</p>
+    <p>© 2026 · Ricardo García-Paz Soldán · Investigador Independiente · Santa Cruz de la Sierra, Bolivia</p>
+    <p>PDEUS · Corredores Ecológicos Ribereños (CER) · En preparación para publicación</p>
 </footer>
 
 </body>
